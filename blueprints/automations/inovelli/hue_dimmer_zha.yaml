@@ -1,11 +1,11 @@
 blueprint:
-  name: Hue Paddle Dimming + Scene Cycling (Unified ZHA Event with Sync)
+  name: Paddle Dimming + Scene Cycling (Unified ZHA Event with Sync)
   description: |-
-      🎯 All-in-one automation for Inovelli Blue switches (ZHA) and Hue Rooms/Zones
+      🎯 All-in-one automation for Inovelli Blue switches (ZHA) and Zigbee Rooms/Zones
 
       ✅ Paddle tap → On/Off  
       ✅ Paddle hold/release → Smooth dimming  
-      ✅ Side button (button 3) → Cycle Hue scenes (forward/backward)  
+      ✅ Side button (button 3) → Cycle scenes (forward/backward)  
       ✅ Configurable off LED color  
       ✅ Light turned on → (optional) activate default scene  
       ✅ Sync switch and light state via derived input_boolean.sync_<room>  
@@ -28,11 +28,11 @@ blueprint:
           integration: zha
 
     light_entity:
-      name: Light Group (Hue Room or Zone)
+      name: Light Group (Room or Zone)
       selector:
         entity:
           domain: light
-          integration: hue
+          integration: zha
 
     dimming_script:
       name: Dimming Script
