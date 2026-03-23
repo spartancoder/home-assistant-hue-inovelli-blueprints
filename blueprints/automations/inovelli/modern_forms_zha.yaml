@@ -31,7 +31,7 @@ blueprint:
       name: Light Group (Room or Zone)
       selector:
         entity:
-          domain: fan
+          domain: light
           integration: modern_forms
 
     dimming_script:
